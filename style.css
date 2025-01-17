@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+no@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 *{
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -25,6 +25,7 @@ body{
 }
 .language-select{
   display: block;
+  text-align: center;
   border: none;
   font-size: 12px;
   margin-left: 90%;
