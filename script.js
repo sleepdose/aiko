@@ -1,24 +1,21 @@
-const texts = {
-    en: {
-        title: "Hey I'm Aiko",
-        description: "Meet, a spirited anime girl with a unique charm, embodying the playful essence of a raccoon. She captures the hearts of everyone she meets. Dressed in a traveler's outfit, she is always ready for adventure.",
-        ticker: "PLAY, COMMUNICATE, EARN — DISCOVER NEW HORIZONS OF THE CRYPTO WORLD TODAY",
-        developer: "DEVELOPER"
-    },
-    ru: {
-        title: "Привет, я Айко",
-        description: "Знакомьтесь, энергичная девушкой-аниме с уникальным шармом, воплощающей игривую сущность енота. Она покоряет сердца всех, кого встречает. В одежде путешественника она всегда готова к приключениям.",
-        ticker: "ИГРАЙ, ОБЩАЙСЯ, ЗАРАБАТЫВАЙ — ОТКРЫВАЙ НОВЫЕ ГОРИЗОНТЫ КРИПТОМИРА УЖЕ СЕГОДНЯ",
-        developer: "РАЗРАБОТЧИКИ"
-    }
-};
+const toggleSwitch = document.getElementById('toggleSwitch');
 
-function setLanguage(lang) {
-    document.getElementById('title').innerText = texts[lang].title;
-    document.getElementById('description').innerText = texts[lang].description;
-    document.getElementById('ticker-text').innerText = texts[lang].ticker;
-    document.getElementById('developer').innerText = texts[lang].developer;
+// Восстанавливаем состояние чекбокса при загрузке страницы
+if (sessionStorage.getItem('toggleState') === 'true') {
+    toggleSwitch.checked = true;
 }
 
-// Устанавливаем язык по умолчанию
-setLanguage('en');
+// Добавляем обработчик события
+toggleSwitch.addEventListener('change', function() {
+    // Сохраняем состояние чекбокса в sessionStorage
+    sessionStorage.setItem('toggleState', this.checked);
+
+    // Переход на соответствующую страницу в зависимости от состояния чекбокса
+    if (this.checked) {
+        // Переход на страницу index1.html
+        window.location.href = 'en-index.html';
+    } else {
+        // Переход на страницу index.html
+        window.location.href = 'ru-index.html';
+    }
+});
