@@ -13,7 +13,7 @@ const toggleSwitch = document.getElementById('toggleSwitch');
        // Переход на соответствующую страницу в зависимости от состояния чекбокса
        if (this.checked) {
            // Переход на страницу index1.html
-           window.location.href = 'index1.html';
+           window.location.href = 'ru-index.html';
        } else {
            // Переход на страницу index.html
            window.location.href = 'index.html';
