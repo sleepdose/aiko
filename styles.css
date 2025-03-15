@@ -1,138 +1,390 @@
-/* Шрифт Chewy для всего сайта */
-body, h1, p {
-    font-family: 'Chewy', cursive;
+html {
+  scroll-behavior: smooth;
 }
 
+html,
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #febb26; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+  color: white;
+  height: 100%;
+  font-family: "Chewy", sans-serif;
+  box-sizing: border-box;
+  background-color: #010713;
+  text-align: center;
 }
 
-/* Плавающий текст с черной обводкой */
-.top-bar {
-    width: 100%;
-    height: 30px;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    border: 2px solid black; /* Черная обводка */
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.moving-text {
-    position: absolute;
-    white-space: nowrap;
-    font-size: 20px;
-    animation: moveText 10s linear infinite;
+h1,
+h2,
+h3 {
+  font-family: "Chewy", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
 }
 
-@keyframes moveText {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+h2 {
+  font-size: 2.1rem;
 }
 
-/* Шапка без фона, с увеличенным логотипом и текстом */
-.header {
-    padding: 10px 20px;
-    position: fixed;
-    top: 30px; /* Под плавающим текстом */
-    width: 100%;
-    z-index: 9;
-    display: flex;
-    align-items: center;
+p {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  margin: 0;
+  line-height: 1.3;
+  font-family: "Chewy", sans-serif;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
+.p-margin-b {
+  margin-bottom: 1rem;
 }
 
-.header-icon {
-    width: 60px; /* Увеличенный логотип */
-    height: 60px;
-    margin-right: 10px;
+.h2-margin-b {
+  margin-bottom: 1.2rem;
 }
 
-.header-content span {
-    font-size: 24px; /* Увеличенный текст AIKO */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Основной контент */
-.main-content {
-    padding-top: 100px; /* Отступ для шапки и плавающего текста */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 100px);
-    position: relative;
+/* Header */
+.head-bar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  top: 0;
+  background: none;
+  border-bottom: none;
+  padding: 0 0 0.25rem 0;
+  margin: 0 auto;
+  max-width: 500px;
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    flex-direction: column; /* По умолчанию вертикально для первой страницы */
+.head-bar-wrapper {
+  margin: 0 10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#page2 {
-    flex-direction: row; /* Горизонтально для второй страницы */
-    justify-content: space-between;
+.navbar-fixed-top.scrolled {
+  background-color: #00111d !important;
+  transition: background-color 200ms linear;
+  border-bottom: 1px solid #343434 !important;
 }
 
-.text-container {
-    text-align: center;
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.image-container {
-    text-align: center;
+.logo-wrapper h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 26px;
+  margin-top: 6px;
 }
 
-.content-image {
-    width: 100%;
-    max-width: 300px;
+.logo-wrapper img {
+  width: 44px;
+  height: auto;
 }
 
-.image-container-wide {
-    flex: 1;
-    text-align: center;
+/* Video Section */
+.video-container {
+  position: relative;
+  z-index: 1;
+  height: 36vh;
 }
 
-.content-image-wide {
-    width: 100%;
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Контейнеры для текста на второй странице */
-#page2 .text-container {
-    display: flex;
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #000 9.57%, #1C1842 100%);
+  opacity: 0.3;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+/* Why Section */
+.why-container {
+  background: linear-gradient(180deg, #000 -50%, #18113b 100%);
+}
+
+.why-wrapper {
+  padding: 20px 16px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.why-block {
+  width: 100%;
+  max-width: 225px;
+  z-index: 1;
+}
+
+.catbat-jump-img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  max-width: 300px;
+}
+
+/* Roadmap */
+.roadmap-container {
+  padding: 20px 16px;
+  background: #010713;
+}
+
+.roadmap-container h2 {
+  text-align: center;
+}
+
+.roadmap-wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.roadmap-info-block {
+  margin-top: 20px;
+}
+
+.p-heading {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Buttons */
+.catbat-buy-btn {
+  background: #FDEB8D;
+  border: 0;
+  font-family: "Chewy", sans-serif;
+  border-radius: 100px;
+  padding: 0.7rem 1.15rem;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+}
+
+/* Slider Styles */
+.content-slider {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.slider-content {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+/* Navigation Arrows */
+.arrow-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.arrow-nav:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .why-wrapper {
     flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Отступы между контейнерами */
-    flex: 1;
-}
-
-.text-box {
-    border: 2px solid black; /* Черная обводка для каждого текста */
-    padding: 10px;
-    background-color: #f2a56d;
-    border-radius: 5px;
-    width: 80%;
     text-align: center;
+  }
+
+  .catbat-jump-img {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    width: 100%;
+    left: 0;
+  }
+
+  .navbar-fixed-top.scrolled {
+    background-color: #00111d !important;
+    transition: background-color 200ms linear;
+    border-bottom: 1px solid #343434 !important;
+  }
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s ease;
 }
 
-/* Стрелки для переключения */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    font-size: 48px;
-    color: white;
-    cursor: pointer;
+.arrow-nav:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
-.left-arrow { left: 20px; }
-.right-arrow { right: 20px; }
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.content-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.slider-content {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+/* Audio Control */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+  padding: 20px 0;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+}
+
+.audio-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.audio-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#backgroundMusic {
+  display: none;
+  /* Скрываем стандартный плеер */
+}

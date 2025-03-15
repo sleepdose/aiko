@@ -1,49 +1,169 @@
-<!DOCTYPE html>
-<html lang="ru">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ваш сайт</title>
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <title>Hiko - New Era</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="HIKO">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Плавающий текст с черной обводкой -->
-    <div class="top-bar">
-        <div class="moving-text">
-            #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO
+  <div class="head-bar navbar-fixed-top">
+    <div class="head-bar-wrapper">
+      <div class="logo-wrapper">
+        <img src="2.png" alt="hiko head symbol">
+        <h1>HIKO</h1>
+      </div>
+      <nav>
+        <div class="nav-buttons">
+          <button id="toggleAudio" class="audio-btn">🔊</button>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <button class="catbat-buy-btn menu-btn">BUY $HIKO</button>
+          </a>
         </div>
+      </nav>
     </div>
-    <!-- Шапка без фона, с увеличенным логотипом и текстом -->
-    <header class="header">
-        <div class="header-content">
-            <img src="logo.png" alt="AIKO Icon" class="header-icon">
-            <span>AIKO</span>
+  </div>
+
+  <div class="container">
+    <div class="video-container">
+      <img src="catbat-bg.jpg" alt="Hiko Background" class="background-video">
+      <div class="gradient-overlay"></div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+      <source src="background-music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="content-slider">
+      <div class="arrow-nav arrow-left">←</div>
+      <div class="arrow-nav arrow-right">→</div>
+      <div class="slider-wrapper">
+        <!-- Who Container -->
+        <div class="slider-content">
+          <div class="why-container">
+            <div class="why-wrapper">
+              <div class="why-block">
+                <h2 class="h2-margin-b">Who is <span>Hiko</span>?</h2>
+                <p class="p-margin-b">Crypto enthusiast, who are obsessed with the idea of getting rich quickly and
+                  dream of becoming part of the next "crypto revolution".</p>
+                <p class="p-margin-b">He first heard about people who had become rich through cryptocurrencies, and this
+                  idea sank into his soul. He decided that he too wanted to be a part of that world.</p>
+              </div>
+              <div class="catbat-jump-block">
+                <img src="https://www.catbat.meme/img/catbat-jump.png" class="catbat-jump-img">
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
-    <!-- Основной контент -->
-    <main class="main-content">
-        <button class="arrow left-arrow"><</button>
-        <div class="content" id="page1">
-            <div class="text-container">
-                <h1>This is my last chance</h1>
+        <!-- Roadmap Container -->
+        <div class="slider-content">
+          <div class="roadmap-container">
+            <h2>Roadmap</h2>
+            <p class="meteora-subheading">As each milestone is delivered, the roadmap on our website will be updated
+              with a checkmark.</p>
+            <div class="roadmap-wrapper">
+              <h3>Phase 1: Foundation & Community Building (Q4 2024)</h3>
+              <div class="what-info-block moonshot-info-block roadmap-info-block">
+                <div class="what-text-block">
+                  <p class="p-heading ready">Website & Moonshot Launch:</p>
+                  <p>Officially launch $CATBAT on Moonshot with a dedicated website featuring the CATBAT story, token
+                    details, and initial roadmap.</p>
+                </div>
+              </div>
             </div>
-            <div class="image-container">
-                <img src="logo.png" alt="Картинка 1" class="content-image">
-            </div>
+          </div>
         </div>
-        <div class="content" id="page2" style="display: none;">
-            <div class="text-container">
-                <div class="text-box"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-                <div class="text-box"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-                <div class="text-box"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+        <!-- Tokenomics Container -->
+        <div class="slider-content">
+          <div class="roadmap-container">
+            <h2>Tokenomics</h2>
+            <p class="meteora-subheading">As each milestone is delivered, the roadmap on our website will be updated
+              with a checkmark.</p>
+            <div class="roadmap-wrapper">
+              <h3>Phase 1: Foundation & Community Building (Q4 2024)</h3>
+              <div class="what-info-block moonshot-info-block roadmap-info-block">
+                <div class="what-text-block">
+                  <p class="p-heading ready">Website & Moonshot Launch:</p>
+                  <p>Officially launch $CATBAT on Moonshot with a dedicated website featuring the CATBAT story, token
+                    details, and initial roadmap.</p>
+                </div>
+              </div>
             </div>
-            <div class="image-container-wide">
-                <img src="roadmap.png" alt="Картинка 16:9" class="content-image-wide">
-            </div>
+          </div>
         </div>
-        <button class="arrow right-arrow">></button>
-    </main>
-    <script src="script.js"></script>
+      </div>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links-container">
+      <a href="#" class="social-link">
+        <img src="telegram.png" alt="Telegram">
+      </a>
+      <a href="#" class="social-link">
+        <img src="dex.png" alt="Dexscreener">
+      </a>
+      <a href="#" class="social-link">
+        <img src="x.png" alt="X">
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const nav = document.querySelector(".navbar-fixed-top");
+      const sliderWrapper = document.querySelector(".slider-wrapper");
+      const arrowLeft = document.querySelector(".arrow-left");
+      const arrowRight = document.querySelector(".arrow-right");
+      const audio = document.getElementById("backgroundMusic");
+      const toggleAudioBtn = document.getElementById("toggleAudio");
+      let currentSlide = 0;
+      const totalSlides = document.querySelectorAll(".slider-content").length;
+      let isPlaying = false;
+
+      // Navbar scroll effect
+      document.addEventListener("scroll", function () {
+        nav.classList.toggle("scrolled", window.scrollY > nav.offsetHeight);
+      });
+
+      // Slider functionality
+      function updateSlider() {
+        sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+
+      arrowRight.addEventListener("click", function () {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+          updateSlider();
+        }
+      });
+
+      arrowLeft.addEventListener("click", function () {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateSlider();
+        }
+      });
+
+      // Audio control
+      toggleAudioBtn.addEventListener("click", function () {
+        if (isPlaying) {
+          audio.pause();
+          toggleAudioBtn.textContent = "🔇";
+        } else {
+          audio.play();
+          toggleAudioBtn.textContent = "🔊";
+        }
+        isPlaying = !isPlaying;
+      });
+
+      // Prevent autoplay on page load (modern browsers block this)
+      // Audio will start only when user clicks the button
+    });
+  </script>
 </body>
+
 </html>
