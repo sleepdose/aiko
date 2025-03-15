@@ -1,95 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style.css">
-    <title>BUBBLE - The Ultimate Meme Token!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="https://telegram.org" class="telegram-btn">TELEGRAM</a>
-
-    <header>
-        <img src="img/text.png" alt="BUBBLE Logo" class="header-img">
-        <img src="img/2.png" alt="Bubble Monkey" class="monkey-graphic">
-    </header>
-
-    <div class="container">
-        <div class="section">
-            <img src="img/2.png" alt="BUBBLE Token" class="token-img">
-            <h2>What’s BUBBLE?</h2>
-            <p>BUBBLE is the ultimate meme token that rules the blockchain! It’s chaos, it’s profit, it’s EVERYTHING you’ve ever memed about!</p>
-        </div>
-
-        <div class="section token-stats" id="tokenStats">
-            <p class="loading" id="marketCap">Market Cap: Loading the bubble...</p>
-            <p id="price">Price: Fetching the meme juice...</p>
-        </div>
-
-        <div class="section features">
-            <div class="feature-card">
-               
-                <h3>Meme Madness</h3>
-                <p>Every trade is a meme explosion!</p>
-            </div>
-            <div class="feature-card">
-            
-                <h3>To the MOON!</h3>
-                <p>Rockets? Nah, we’re on meme jetpacks!</p>
-            </div>
-            <div class="feature-card">
-          
-                <h3>Meme Legion</h3>
-                <p>Join the wildest meme army ever!</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>BUBBLE Roadmap to the MOON</h2>
-            <div class="features">
-                <div class="feature-card">
-                  
-                    <h3>Phase 1</h3>
-                    <p>Launch the bubble, pop the normies!</p>
-                </div>
-                <div class="feature-card">
-            
-                    <h3>Phase 2</h3>
-                    <p>10k holders or we eat the blockchain!</p>
-                </div>
-                <div class="feature-card">
-              
-                    <h3>Phase 3</h3>
-                    <p>Meme takeover - BUBBLE everywhere!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>The Bubble Crew</h2>
-            <div class="features">
-                <div class="feature-card">
-                  
-                    <h3>Bubble Lord</h3>
-                    <p>Master of memes, king of chaos.</p>
-                </div>
-                <div class="feature-card">
-                 
-                    <h3>Meme Wizard</h3>
-                    <p>Casting spells with Solidity.</p>
-                </div>
-                <div class="feature-card">
-                  
-                    <h3>Chaos Monkey</h3>
-                    <p>Banana-powered hype machine.</p>
-                </div>
-            </div>
+    <!-- Плавающий текст с черной обводкой -->
+    <div class="top-bar">
+        <div class="moving-text">
+            #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO #AIKO
         </div>
     </div>
-
-    <footer>
-        <p>© 2025 BUBBLE - Powered by memes, vibes, and pure chaos!</p>
-    </footer>
-        <script src="script.js"></script>
+    <!-- Шапка без фона, с увеличенным логотипом и текстом -->
+    <header class="header">
+        <div class="header-content">
+            <img src="logo.png" alt="AIKO Icon" class="header-icon">
+            <span>AIKO</span>
+        </div>
+    </header>
+    <!-- Основной контент -->
+    <main class="main-content">
+        <button class="arrow left-arrow"><</button>
+        <div class="content" id="page1">
+            <div class="text-container">
+                <h1>This is my last chance</h1>
+            </div>
+            <div class="image-container">
+                <img src="logo.png" alt="Картинка 1" class="content-image">
+            </div>
+        </div>
+        <div class="content" id="page2" style="display: none;">
+            <div class="text-container">
+                <div class="text-box"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                <div class="text-box"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                <div class="text-box"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+            </div>
+            <div class="image-container-wide">
+                <img src="roadmap.png" alt="Картинка 16:9" class="content-image-wide">
+            </div>
+        </div>
+        <button class="arrow right-arrow">></button>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

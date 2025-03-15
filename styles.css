@@ -1,0 +1,138 @@
+/* Шрифт Chewy для всего сайта */
+body, h1, p {
+    font-family: 'Chewy', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #febb26; 
+}
+
+/* Плавающий текст с черной обводкой */
+.top-bar {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border: 2px solid black; /* Черная обводка */
+}
+
+.moving-text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 20px;
+    animation: moveText 10s linear infinite;
+}
+
+@keyframes moveText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Шапка без фона, с увеличенным логотипом и текстом */
+.header {
+    padding: 10px 20px;
+    position: fixed;
+    top: 30px; /* Под плавающим текстом */
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    width: 60px; /* Увеличенный логотип */
+    height: 60px;
+    margin-right: 10px;
+}
+
+.header-content span {
+    font-size: 24px; /* Увеличенный текст AIKO */
+}
+
+/* Основной контент */
+.main-content {
+    padding-top: 100px; /* Отступ для шапки и плавающего текста */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    position: relative;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-direction: column; /* По умолчанию вертикально для первой страницы */
+}
+
+#page2 {
+    flex-direction: row; /* Горизонтально для второй страницы */
+    justify-content: space-between;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 300px;
+}
+
+.image-container-wide {
+    flex: 1;
+    text-align: center;
+}
+
+.content-image-wide {
+    width: 100%;
+}
+
+/* Контейнеры для текста на второй странице */
+#page2 .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Отступы между контейнерами */
+    flex: 1;
+}
+
+.text-box {
+    border: 2px solid black; /* Черная обводка для каждого текста */
+    padding: 10px;
+    background-color: #f2a56d;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+/* Стрелки для переключения */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+}
+
+.left-arrow { left: 20px; }
+.right-arrow { right: 20px; }
