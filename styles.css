@@ -126,30 +126,6 @@ img {
   opacity: 0.3;
 }
 
-.social-icons {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  display: flex;
-  gap: 8px;
-  z-index: 1;
-}
-
-.social-icons a {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.social-icons a:hover {
-  transform: translateY(-3px);
-}
-
 /* Why Section */
 .why-container {
   background: linear-gradient(180deg, #000 -50%, #18113b 100%);
@@ -260,86 +236,7 @@ img {
   right: 10px;
 }
 
-/* Media Queries */
-@media (max-width: 500px) {
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .why-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .catbat-jump-img {
-    position: relative;
-    left: 0;
-    transform: none;
-    margin-top: 20px;
-  }
-
-  .social-icons {
-    justify-content: center;
-    width: 100%;
-    left: 0;
-  }
-
-  .navbar-fixed-top.scrolled {
-    background-color: #00111d !important;
-    transition: background-color 200ms linear;
-    border-bottom: 1px solid #343434 !important;
-  }
-
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.3s ease;
-}
-
-.arrow-nav:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.arrow-left {
-  left: 10px;
-}
-
-.arrow-right {
-  right: 10px;
-}
-
-.content-slider {
-  position: relative;
-  overflow: hidden;
-}
-
-.slider-wrapper {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 100%;
-}
-
-.slider-content {
-  flex: 0 0 100%;
-  width: 100%;
-}
-
-/* Audio Control */
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
+/* Social Links */
 .social-links-container {
   display: flex;
   justify-content: center;
@@ -368,6 +265,7 @@ img {
   height: 24px;
 }
 
+/* Audio Control */
 .audio-btn {
   background: rgba(255, 255, 255, 0.1);
   border: none;
@@ -384,7 +282,53 @@ img {
   background: rgba(255, 255, 255, 0.3);
 }
 
-#backgroundMusic {
-  display: none;
-  /* Скрываем стандартный плеер */
+/* Стили для текста секторов */
+.sector-text {
+  fill: white !important; /* Белый цвет текста */
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  pointer-events: none;
+  text-shadow: 1px 1px 2px black; /* Тень для улучшения читаемости */
+  transition: opacity 0.3s ease; /* Плавное появление текста */
+  text-anchor: middle; /* Центрирование текста по горизонтали */
+  dominant-baseline: middle; /* Центрирование текста по вертикали */
+}
+.sector-image {
+    transition: transform 0.3s ease;
+}
+
+.sector-1:hover .sector-image {
+    transform: translate(19.75px, 3.13px);
+}
+
+.sector-2:hover .sector-image {
+    transform: translate(17.83px, 9.06px);
+}
+
+.sector-3:hover .sector-image {
+    transform: translate(14.14px, 14.14px);
+}
+
+.sector-4:hover .sector-image {
+    transform: translate(8.86px, 18.22px);
+}
+
+.sector-5:hover .sector-image {
+    transform: translate(-16.18px, -11.76px);
+
+}
+.sector-image {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.sector:hover .sector-image {
+    transform: scale(1.05); /* Увеличиваем сектор при наведении */
+    filter: brightness(1.2); /* Подсветка */
+}
+
+#tooltip {
+    pointer-events: none; /* Чтобы не мешал взаимодействию */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }

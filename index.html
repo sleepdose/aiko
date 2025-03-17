@@ -1,5 +1,5 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Hiko - New Era</title>
   <meta charset="UTF-8">
@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <div class="head-bar navbar-fixed-top">
     <div class="head-bar-wrapper">
@@ -34,7 +33,7 @@
     </div>
 
     <audio id="backgroundMusic" loop>
-      <source src="img\background-music.mp3" type="audio/mpeg">
+      <source src="background-music.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
@@ -81,18 +80,54 @@
         <div class="slider-content">
           <div class="roadmap-container">
             <h2>Tokenomics</h2>
-            <p class="meteora-subheading">As each milestone is delivered, the roadmap on our website will be updated
-              with a checkmark.</p>
-            <div class="roadmap-wrapper">
-              <h3>Phase 1: Foundation & Community Building (Q4 2024)</h3>
-              <div class="what-info-block moonshot-info-block roadmap-info-block">
-                <div class="what-text-block">
-                  <p class="p-heading ready">Website & Moonshot Launch:</p>
-                  <p>Officially launch $CATBAT on Moonshot with a dedicated website featuring the CATBAT story, token
-                    details, and initial roadmap.</p>
-                </div>
-              </div>
-            </div>
+              <svg width="400" height="400" viewBox="-150 -150 300 300">
+    <defs>
+      <!-- 5% TEAM: 233°–251° -->
+      <clipPath id="clip1">
+        <path d="M0 0 L-39.26 -92.08 A100 100 0 0 1 -14.11 -99.00 Z" />
+      </clipPath>
+      <!-- 5% AIRDROP: 251°–269° -->
+      <clipPath id="clip2">
+        <path d="M0 0 L-14.11 -99.00 A100 100 0 0 1 1.74 -99.98 Z" />
+      </clipPath>
+      <!-- 5% DEX: 269°–287° -->
+      <clipPath id="clip3">
+        <path d="M0 0 L1.74 -99.98 A100 100 0 0 1 29.20 -95.69 Z" />
+      </clipPath>
+      <!-- 5% BURNING: 287°–305° -->
+      <clipPath id="clip4">
+        <path d="M0 0 L29.20 -95.69 A100 100 0 0 1 57.36 -81.92 Z" />
+      </clipPath>
+      <!-- 80% COMMUNITY: 305°–233° -->
+      <clipPath id="clip5">
+        <path d="M0 0 L57.36 -81.92 A100 100 0 1 1 -39.26 -92.08 Z" />
+      </clipPath>
+    </defs>
+
+    <!-- Секторы -->
+    <g class="sector" data-text="5% TEAM">
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip1)" />
+    </g>
+    <g class="sector" data-text="5% AIRDROP">
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip2)" />
+    </g>
+    <g class="sector" data-text="5% DEX">
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip3)" />
+    </g>
+    <g class="sector" data-text="5% BURNING">
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip4)" />
+    </g>
+    <g class="sector" data-text="80% COMMUNITY">
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip5)" />
+    </g>
+
+    <!-- Текст с обновленными координатами -->
+    <text class="sector-text" x="0" y="-120" opacity="0">5% TEAM</text>
+    <text class="sector-text" x="0" y="-120" opacity="0">5% AIRDROP</text>
+    <text class="sector-text" x="0" y="-120" opacity="0">5% DEX</text>
+    <text class="sector-text" x="0" y="-120" opacity="0">5% BURNING</text>
+    <text class="sector-text" x="0" y="-120" opacity="0">80% COMMUNITY</text>
+  </svg>
           </div>
         </div>
       </div>
@@ -101,69 +136,96 @@
     <!-- Social Links -->
     <div class="social-links-container">
       <a href="#" class="social-link">
-        <img src="img\telegram.png" alt="Telegram">
+        <img src="telegram.png" alt="Telegram">
       </a>
       <a href="#" class="social-link">
-        <img src="img\dex.png" alt="Dexscreener">
+        <img src="dex.png" alt="Dexscreener">
       </a>
       <a href="#" class="social-link">
-        <img src="img\x.png" alt="X">
+        <img src="x.png" alt="X">
       </a>
     </div>
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const nav = document.querySelector(".navbar-fixed-top");
-      const sliderWrapper = document.querySelector(".slider-wrapper");
-      const arrowLeft = document.querySelector(".arrow-left");
-      const arrowRight = document.querySelector(".arrow-right");
-      const audio = document.getElementById("backgroundMusic");
-      const toggleAudioBtn = document.getElementById("toggleAudio");
-      let currentSlide = 0;
-      const totalSlides = document.querySelectorAll(".slider-content").length;
-      let isPlaying = false;
+  document.addEventListener("DOMContentLoaded", function () {
+const nav = document.querySelector(".navbar-fixed-top");
+const sliderWrapper = document.querySelector(".slider-wrapper");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+const audio = document.getElementById("backgroundMusic");
+const toggleAudioBtn = document.getElementById("toggleAudio");
+let currentSlide = 0;
+const totalSlides = document.querySelectorAll(".slider-content").length;
+let isPlaying = false;
 
-      // Navbar scroll effect
-      document.addEventListener("scroll", function () {
-        nav.classList.toggle("scrolled", window.scrollY > nav.offsetHeight);
-      });
+// Navbar scroll effect
+document.addEventListener("scroll", function () {
+  nav.classList.toggle("scrolled", window.scrollY > nav.offsetHeight);
+});
 
-      // Slider functionality
-      function updateSlider() {
-        sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
-      }
+// Slider functionality
+function updateSlider() {
+  sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
 
-      arrowRight.addEventListener("click", function () {
-        if (currentSlide < totalSlides - 1) {
-          currentSlide++;
-          updateSlider();
-        }
-      });
+arrowRight.addEventListener("click", function () {
+  if (currentSlide < totalSlides - 1) {
+    currentSlide++;
+    updateSlider();
+  }
+});
 
-      arrowLeft.addEventListener("click", function () {
-        if (currentSlide > 0) {
-          currentSlide--;
-          updateSlider();
-        }
-      });
+arrowLeft.addEventListener("click", function () {
+  if (currentSlide > 0) {
+    currentSlide--;
+    updateSlider();
+  }
+});
 
-      // Audio control
-      toggleAudioBtn.addEventListener("click", function () {
-        if (isPlaying) {
-          audio.pause();
-          toggleAudioBtn.textContent = "🔇";
-        } else {
-          audio.play();
-          toggleAudioBtn.textContent = "🔊";
-        }
-        isPlaying = !isPlaying;
-      });
+// Audio control
+toggleAudioBtn.addEventListener("click", function () {
+  if (isPlaying) {
+    audio.pause();
+    toggleAudioBtn.textContent = "🔇";
+  } else {
+    audio.play();
+    toggleAudioBtn.textContent = "🔊";
+  }
+  isPlaying = !isPlaying;
+});
 
-      // Prevent autoplay on page load (modern browsers block this)
-      // Audio will start only when user clicks the button
-    });
+// Управление текстом для секторов
+const sectors = document.querySelectorAll('.sector');
+const texts = document.querySelectorAll('.sector-text');
+
+sectors.forEach((sector, index) => {
+  // Для десктопов: mouseover и mouseout
+  sector.addEventListener('mouseover', () => {
+    texts[index].setAttribute('opacity', '1');
+  });
+  sector.addEventListener('mouseout', () => {
+    texts[index].setAttribute('opacity', '0');
+  });
+
+  // Для мобильных устройств: touchstart и touchend
+  sector.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Предотвращаем нежелательное поведение (например, прокрутку)
+    texts[index].setAttribute('opacity', '1');
+  });
+  sector.addEventListener('touchend', () => {
+    texts[index].setAttribute('opacity', '0');
+  });
+
+  // Опционально: поддержка кликов (альтернатива touchstart/touchend)
+  sector.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Переключение видимости текста при клике
+    const currentOpacity = texts[index].getAttribute('opacity');
+    texts[index].setAttribute('opacity', currentOpacity === '1' ? '0' : '1');
+  });
+});
+});
   </script>
 </body>
-
 </html>
