@@ -126,11 +126,6 @@ img {
   opacity: 0.3;
 }
 
-/* Why Section */
-.why-container {
-  background: linear-gradient(180deg, #000 -50%, #18113b 100%);
-}
-
 .why-wrapper {
   padding: 20px 16px;
   position: relative;
@@ -143,14 +138,17 @@ img {
   width: 100%;
   max-width: 225px;
   z-index: 1;
+  text-align: center; /* Добавить центрирование текста */
+  margin: 0 auto; /* Центрировать сам блок */
 }
 
 .catbat-jump-img {
   position: absolute;
-  left: 50%;
+  left: 30%;
   transform: translateX(-50%);
   width: 85%;
   max-width: 300px;
+  margin: 80px;
 }
 
 /* Roadmap */
