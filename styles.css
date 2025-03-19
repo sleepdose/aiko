@@ -287,6 +287,7 @@ img {
 
 /* Стили для текста секторов */
 .sector-text {
+  font-family: "Chewy", sans-serif !important;
   fill: white !important; /* Белый цвет текста */
   font-size: 16px;
   font-weight: bold;
@@ -355,4 +356,15 @@ img {
 }
 .nav-buttons {
   margin: 10px;
+}
+/* Скрытие стрелок */
+.arrow-nav.hidden {
+  display: none !important;
+}
+/* Изначальное скрытие стрелок */
+.arrow-left.initial-hidden {
+  display: none !important;
+}
+.arrow-right.initial-hidden {
+  display: none !important;
 }

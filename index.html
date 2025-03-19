@@ -12,7 +12,7 @@
   <div class="head-bar navbar-fixed-top">
     <div class="head-bar-wrapper">
       <div class="logo-wrapper">
-        <img src="img\2.png" alt="hiko head symbol">
+        <img src="2.png" alt="hiko head symbol">
         <h1>HIKO</h1>
       </div>
       <nav>
@@ -28,12 +28,12 @@
 
   <div class="container">
     <div class="video-container">
-      <img src="img\shapka1.PNG" alt="Hiko Background" class="background-video">
+      <img src="shapka1.png" alt="Hiko Background" class="background-video">
       <div class="gradient-overlay"></div>
     </div>
 
     <audio id="backgroundMusic" loop>
-      <source src="img\background-music.mp3" type="audio/mpeg">
+      <source src="background-music.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
@@ -47,11 +47,11 @@
             <div class="why-wrapper">
               <div class="why-block">
                 <h2 class="h2-margin-b">Who is <span>Hiko</span>?</h2>
-                <p class="p-margin-b">Crypto enthusiast, who are obsessed with the idea of getting rich quickly and
+                <p class="meteora-subheading">Crypto enthusiast, who are obsessed with the idea of getting rich quickly and
                   dream of becoming part of the next "crypto revolution".</p>
               </div>
               <div class="catbat-jump-block">
-                <img src="img\rocket.png" class="catbat-jump-img">
+                <img src="rocket.png" class="catbat-jump-img">
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@
             <h2>Roadmap</h2>
             <p class="meteora-subheading">As each milestone is delivered, the roadmap on our website will be updated with a checkmark.</p>
                 <div class="roadmap-block">
-                  <img src="img\roadmap.png" class="roadmap-block-img">
+                  <img src="roadmap.png" class="roadmap-block-img">
                 </div>
           </div>
         </div>
@@ -97,19 +97,19 @@
 
     <!-- Секторы -->
     <g class="sector" data-text="5% TEAM">
-      <image class="sector-image" xlink:href="img\pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip1)" />
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip1)" />
     </g>
     <g class="sector" data-text="5% AIRDROP">
-      <image class="sector-image" xlink:href="img\pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip2)" />
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip2)" />
     </g>
     <g class="sector" data-text="5% DEX">
-      <image class="sector-image" xlink:href="img\pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip3)" />
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip3)" />
     </g>
     <g class="sector" data-text="5% BURNING">
-      <image class="sector-image" xlink:href="img\pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip4)" />
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip4)" />
     </g>
     <g class="sector" data-text="80% COMMUNITY">
-      <image class="sector-image" xlink:href="img\pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip5)" />
+      <image class="sector-image" xlink:href="pizza.png" x="-150" y="-150" width="300" height="300" clip-path="url(#clip5)" />
     </g>
 
     <!-- Текст с обновленными координатами -->
@@ -127,13 +127,13 @@
     <!-- Social Links -->
     <div class="social-links-container">
       <a href="#" class="social-link">
-        <img src="img\telegram.png" alt="Telegram">
+        <img src="telegram.png" alt="Telegram">
       </a>
       <a href="#" class="social-link">
-        <img src="img\dex.png" alt="Dexscreener">
+        <img src="dex.png" alt="Dexscreener">
       </a>
       <a href="#" class="social-link">
-        <img src="img\x.png" alt="X">
+        <img src="x.png" alt="X">
       </a>
     </div>
   </div>
@@ -154,11 +154,24 @@ let isPlaying = false;
 document.addEventListener("scroll", function () {
   nav.classList.toggle("scrolled", window.scrollY > nav.offsetHeight);
 });
-
+// Инициализация начального состояния
+  function initSlider() {
+    arrowLeft.classList.add('initial-hidden'); // Скрываем левую стрелку сразу
+    if (totalSlides > 1) {
+      arrowRight.classList.remove('initial-hidden'); // Показываем правую если есть слайды
+    }
+    updateSlider();
+  }
 // Slider functionality
 function updateSlider() {
-  sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
+    sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+    // Логика переключения стрелок
+    arrowLeft.classList.toggle('initial-hidden', currentSlide === 0);
+    arrowRight.classList.toggle('initial-hidden', currentSlide === totalSlides - 1);
+  }
+
+  // Инициализируем слайдер при загрузке
+  initSlider();
 
 arrowRight.addEventListener("click", function () {
   if (currentSlide < totalSlides - 1) {
