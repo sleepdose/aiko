@@ -181,7 +181,7 @@ img {
   border: 0;
   font-family: "Chewy", sans-serif;
   border-radius: 100px;
-  padding: 0.7rem 1.15rem;
+  padding: 9px;
   font-size: 1rem;
   color: black;
   cursor: pointer;
@@ -346,4 +346,7 @@ img {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+.nav-buttons {
+  margin: 10px;
 }
