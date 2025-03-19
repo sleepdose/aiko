@@ -240,7 +240,6 @@ img {
   justify-content: center;
   gap: 20px;
   margin: 20px auto;
-  padding: 20px 0;
 }
 
 .social-link {
@@ -329,4 +328,22 @@ img {
 #tooltip {
     pointer-events: none; /* Чтобы не мешал взаимодействию */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.roadmap-block-img {
+  max-width: 58%;
+  padding: 30px;
+}
+/* Добавьте это в конец styles.css */
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.roadmap-container svg {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
